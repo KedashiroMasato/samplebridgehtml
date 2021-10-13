@@ -6,6 +6,8 @@
   var element = document.getElementById( "test" );
   var url = new URL(window.location.href);
   var params = url.searchParams;
+  console.log(element)
+  console.log(params.get('code'))
   element.setAttribute('content','my-scheme://?code=' + params.get('code'));
   </script>
 <body>
