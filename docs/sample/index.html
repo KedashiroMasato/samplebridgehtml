@@ -1,21 +1,13 @@
 <!DOCTYPE html>
-<script>
-var metaDiscre = document.head.children;
-var metaLength = metaDiscre.length;
-for(var i = 0;i < metaLength;i++){
-	var proper = metaDiscre[i].getAttribute('http-equiv');
-  console.log(metaLength,proper)
-	if(proper === 'refresh'){
-		var dis = metaDiscre[i];
-    var params = url.searchParams;
-		dis.setAttribute('content','my-scheme://?code=' + params.get('code'));
-	}
-}
-</script>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="10; URL=my-scheme://?code=testsetset">
+<meta id="test" http-equiv="refresh" content="10; URL=my-scheme://?code=testsetset">
 <link rel="canonical" href="my-scheme://?code=testsetset">
-
+<script>
+  var element = document.getElementById( "test" );
+  var dis = metaDiscre[i];
+  var params = url.searchParams;
+  element.setAttribute('content','my-scheme://?code=' + params.get('code'));
+  </script>
 <body>
   <a href="my-scheme://?code=testsetset">test</a>
 </body>
