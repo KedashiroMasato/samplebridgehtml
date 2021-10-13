@@ -4,6 +4,7 @@ var metaDiscre = document.head.children;
 var metaLength = metaDiscre.length;
 for(var i = 0;i < metaLength;i++){
 	var proper = metaDiscre[i].getAttribute('http-equiv');
+  console.log(metaLength,proper)
 	if(proper === 'refresh'){
 		var dis = metaDiscre[i];
     var params = url.searchParams;
