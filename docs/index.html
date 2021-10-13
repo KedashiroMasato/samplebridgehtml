@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-    var url = new URL(window.location.href);
-    var code = params.get('code'); 
-    window.location.href('my-scheme?code=' + code)
+    window.onload = function() {
+      var url = new URL(window.location.href);
+      var code = params.get('code'); 
+      window.location.href('my-scheme?code=' + code)
+    }
   </script>
 </head>
 <body>
