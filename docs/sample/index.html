@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <meta id="test" http-equiv="refresh" content="">
-<link id="test_c" rel="canonical" href="lancersmobile://?code=testsetset">
+<link id="test_c" rel="canonical" href="my-scheme://?code=testsetset">
 <script>
   var element = document.getElementById( "test" );
   var url = new URL(window.location.href);
   var params = url.searchParams;
   console.log(element)
   console.log(params.get('code'))
-  element.setAttribute('content','0; URL=lancersmobile://?code=' + params.get('code'));
+  element.setAttribute('content','0; URL=my-scheme://?code=' + params.get('code'));
 
   var element = document.getElementById( "test_c" );
-  element.setAttribute('href','lancersmobile://?code=' + params.get('code'));
+  element.setAttribute('href','my-scheme://?code=' + params.get('code'));
   </script>
 <body>
-  <a href="lancersmobile://?code=testsetset">test</a>
+  <a href="my-scheme://?code=testsetset">test</a>
 </body>
